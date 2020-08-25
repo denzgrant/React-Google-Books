@@ -5,10 +5,11 @@ const ApiKey = process.env.REACT_APP_API_KEY;
 
 
 export default {
-  // Gets all books
+  // API call to search for books
   searchGoogleBooks: function (searchTerms) {
     return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${searchTerms}&key=${ApiKey}`);
   },
+  // Gets all books
   getSavedBooks: function () {
     return axios.get("/api/books");
   },

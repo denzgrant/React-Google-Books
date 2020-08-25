@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css"
 import SearchCard from "../ResultCard";
 
-function Results(props){
+function Results(props) {
     let books = props.books;
     return (
         <div className="col-12">
@@ -12,7 +12,7 @@ function Results(props){
                     books.length > 0 ? books.map(event => {
                         let data;
 
-                        if(props.save){
+                        if (props.save) {
                             data = {
                                 id: event.id,
                                 title: event.volumeInfo.title,
@@ -33,8 +33,18 @@ function Results(props){
                             };
                         }
 
-                        return <SearchCard key={data.id} id={data.id} title={data.title} auth={data.authors} img={data.img} desc={data.desc} link={data.link} save={props.save} handleSave={props.handleSave} handleDelete={props.handleDelete}/>
-                    }) : <h3 style={{color: "#DB4437"}}>No Results Available</h3>
+                        return <SearchCard
+                            key={data.id}
+                            id={data.id}
+                            title={data.title}
+                            auth={data.authors}
+                            img={data.img} 
+                            desc={data.desc} 
+                            link={data.link} 
+                            save={props.save} 
+                            handleSave={props.handleSave} 
+                            handleDelete={props.handleDelete} />
+                    }) : <h3 style={{ color: "#DB4437" }}>No Results Available</h3>
                 }
             </div>
         </div>

@@ -1,32 +1,31 @@
-.result-card-style{
-    background-color: #4285F4;
-    color: white;
-    padding: 25px;
-    border-radius: 25px;
+.result-card-style {
+  background-color: #4285f4;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 25px;
 }
 
 .card-horizontal {
-    display: flex;
-}
-
-.book-title {
-    float: left;
-
+  display: flex;
 }
 
 .image {
-    position: absolute;
-    padding: 0; 
-    overflow: hidden; 
-    height: 200px;
+  padding: 0;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 5px;
 }
 
 .description {
-    overflow: hidden;
-    position: relative;
-    max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
 }
 
 .btn-group {
-    float: right !important;
+  float: right !important;
+}
+#save {
+  margin-right: 5px;
+
 }
