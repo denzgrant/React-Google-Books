@@ -4,5 +4,5 @@ to = "/index.html"
 status = 200 
 
 [build]	
-    command = "npm build"
+    command = "npm run-script build"
     build = "build"
