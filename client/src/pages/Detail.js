@@ -4,7 +4,7 @@ import Results from "../components/Results";
 import API from "../utils/API";
 
 
-function SavedPage(){
+function Detail() {
 
     const [savedBooks, setSavedBooks] = useState([]);
 
@@ -12,13 +12,14 @@ function SavedPage(){
         loadSavedBooks();
     }, [savedBooks]);
 
-    function loadSavedBooks(){
-        API.getSavedBooks().then(res => {
-            setSavedBooks(res.data);
-        });
+    function loadSavedBooks() {
+        API.getSavedBooks()
+            .then(res => {
+                setSavedBooks(res.data);
+            }).catch(err => console.log(err));
     }
 
-    function handleDelete(id){
+    function handleDelete(id) {
         API.deleteBook(id).then(res => {
             console.log(res);
             loadSavedBooks();
@@ -29,16 +30,16 @@ function SavedPage(){
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12">
-                    <Jumbotron/>
+                    <Jumbotron />
                 </div>
             </div>
 
             <div className="row">
-                <Results books={savedBooks}  save={false} handleDelete={handleDelete}/>
+                <Results books={savedBooks} save={false} handleDelete={handleDelete} />
             </div>
         </div>
     );
 }
 
 
-export default SavedPage;
+export default Detail;
