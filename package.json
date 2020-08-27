@@ -10,7 +10,6 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "heroku-postbuild": "npm run install && npm run build",
-    "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
     "build": "cd client && npm run build"
   },
@@ -27,6 +26,7 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "node-sass": "^4.14.1",
-    "react-card-flip": "^1.0.11"
+    "react-card-flip": "^1.0.11",
+    "serve": "^11.3.2"
   }
 }
