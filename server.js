@@ -15,9 +15,11 @@ app.use(routes);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+} else {
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  });
 }
-
-{process.env.MONGO_ATLAS_PASS}
 
 const uri = (`mongodb+srv://me:${process.env.MONGO_ATLAS_PASS}@googlebooks.i7x4a.mongodb.net/<dbname>?retryWrites=true&w=majority`)
 
