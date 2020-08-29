@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const uri = (`mongodb+srv://me:${process.env.MONGO_ATLAS_PASS}@googlebooks.i7x4a.mongodb.net/<dbname>?retryWrites=true&w=majority`)
+const uri = (`mongodb+srv://me:${process.env.MONGO_ATLAS_PASS}@googlebooks.i7x4a.mongodb.net/books?retryWrites=true&w=majority`)
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
