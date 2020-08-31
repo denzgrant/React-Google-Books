@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const path = require("path");
 const app = express();
 
 require('dotenv').config()
@@ -14,9 +15,10 @@ app.use(express.json());
 app.use(routes);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname + "/client/build"));
+  app.use(express.static("client/build"));
+} else {
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
 }
 
@@ -35,3 +37,5 @@ mongoose.connect(uri, {
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+module.exports = app;
