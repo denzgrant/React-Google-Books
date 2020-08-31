@@ -22,6 +22,7 @@ function Detail() {
     function handleDelete(id) {
         API.deleteBook(id).then(res => {
             console.log(res);
+            alert("Book was deleted!")
             loadSavedBooks();
         });
     }

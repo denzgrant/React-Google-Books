@@ -23,13 +23,12 @@ function SearchCard(props) {
                     rel="noopener noreferrer" 
                     href={props.link} >View</a>
                     {props.save ? <button type="button"
-                        className="btn btn-primary"
+                        className="btn btn-primary rightButton"
                         data-target={"#" + props.id}
-                        id="save"
                         onClick={() => props.handleSave(props)}>Save
                     </button> : <button
                             type="button"
-                            className="btn btn-primary"
+                            className="btn btn-primary rightButton"
                             onClick={() => props.handleDelete(props.id)}>Delete</button>}
 
                 </div>
