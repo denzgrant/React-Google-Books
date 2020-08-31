@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-const path = require("path");
 const app = express();
 
 require('dotenv').config()
@@ -16,10 +15,6 @@ app.use(routes);
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-} else {
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  });
 }
 
 const uri = (`mongodb+srv://me:${process.env.MONGO_ATLAS_PASS}@googlebooks.i7x4a.mongodb.net/books?retryWrites=true&w=majority`)
