@@ -23,6 +23,16 @@
 <li>In the root directory of the project, start the app.<pre><code><span class="hljs-title">npm start</span>
 </code></pre></li>
 </ol>
+  ## NPM Packages
+
+| Package | Documentation |
+| ----------- | ----------- |
+| `express` | [Express](https://www.npmjs.com/package/express) |
+| `reactstrap` | [reactstrap](https://www.npmjs.com/package/reactstrap) |
+| `axios` | [axios](https://www.npmjs.com/package/axios) |
+| `mongoose` | [Mongoose](https://www.npmjs.com/package/mongoose) |
+
+
   <p></p>
   <h2 id="Usage">Usage</h2>
   <p>Searching ebooks and audiobooks that GoogleBooks have to offer.</p> 
