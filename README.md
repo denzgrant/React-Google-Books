@@ -1,5 +1,5 @@
 
- <h1>React-Google-Books!</h1>
+ <h1>React-Google-Books</h1>
 <img src="https://img.shields.io/github/last-commit/denzgrant/React-Google-Books">
 
 <p>MERN stack application where the use can use an API search to save Google Books to a database. The selected books are saved within MongoDB Atlas and Mongoose.js is used as an ODM.
