@@ -17,7 +17,7 @@
   </ul>
   <h2 id="Installation">Installation</h2>
     <ol>
-<li>Clone this repository.<pre><code> git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>https://github.com/denzgrant/React-Google-Books.git
+<li>Clone this repository.<pre><code> git <span class="hljs-keyword">clone</span> <span class="hljs-title">https://github.com/denzgrant/React-Google-Books.git
 </code></pre></li>
 </code></pre></li>
 <li>In the root directory of the project, start the app.<pre><code><span class="hljs-title">npm start</span>
