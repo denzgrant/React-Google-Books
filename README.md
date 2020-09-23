@@ -23,7 +23,8 @@
 <li>In the root directory of the project, start the app.<pre><code><span class="hljs-title">npm start</span>
 </code></pre></li>
 </ol>
-  ## NPM Packages
+
+  <h2>NPM Packages</h2>
 
 | Package | Documentation |
 | ----------- | ----------- |
